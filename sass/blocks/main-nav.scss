@@ -1,0 +1,128 @@
+.main-nav {
+  width: 1096px;
+  padding-top: 22px;
+  padding-right: 52px;
+  padding-bottom: 22px;
+  padding-left: 52px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-nav__logo-link {
+  cursor: pointer;
+}
+
+.main-nav__logo-icon {
+  display: block;
+  width: 160px;
+  height: 48px;
+}
+
+.main-nav__logo-core-bike {
+  stroke: #ffffff;
+
+  .main-nav__logo-link:hover &,
+  .main-nav__logo-link:focus & {
+    stroke: darken(#ffffff, 10%);
+  }
+
+  .main-nav__logo-link:active & {
+    stroke: darken(#ffffff, 15%);
+  }
+
+  &--black {
+    stroke: #000000;
+
+    .main-nav__logo-link:hover &,
+    .main-nav__logo-link:focus & {
+      stroke: lighten(#000000, 20%);
+    }
+
+    .main-nav__logo-link:active & {
+      stroke: lighten(#000000, 10%);
+    }
+  }
+}
+
+.main-nav__logo-core-text {
+  fill: #ffffff;
+
+  .main-nav__logo-link:hover &,
+  .main-nav__logo-link:focus & {
+    fill: darken(#ffffff, 10%);
+  }
+
+  .main-nav__logo-link:active & {
+    fill: darken(#ffffff, 15%);
+  }
+
+  &--black {
+    fill: #000000;
+
+    .main-nav__logo-link:hover &,
+    .main-nav__logo-link:focus & {
+      fill: lighten(#000000, 20%);
+    }
+
+    .main-nav__logo-link:active & {
+      fill: lighten(#000000, 10%);
+    }
+  }
+}
+
+.main-nav__pages-list {
+  width: 650px;
+  padding: 0;
+  padding-top: 6px;
+  margin: 0;
+  list-style: none;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.main-nav__pages-item {
+  max-width: 100%;
+  margin-left: 35px;
+  font-family: "Roboto", "Arial", "Verdana", sans-serif;
+  font-size: 15px;
+  line-height: 2.062;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  .main-nav__pages-list--color-black & {
+    color: #000000;
+  }
+}
+
+.main-nav__pages-item-link {
+  font: inherit;
+  color: inherit;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: darken(#ffffff, 10%);
+  }
+
+  &:active {
+    color: darken(#ffffff, 15%);
+  }
+
+  .main-nav__pages-list--color-black &:hover,
+  .main-nav__pages-list--color-black &:focus {
+    color: lighten(#000000, 20%);
+  }
+
+  .main-nav__pages-list--color-black &:active {
+    color: lighten(#000000, 10%);
+  }
+}

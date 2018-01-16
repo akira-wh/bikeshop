@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="origin">
+    <title>The Bike Shop — вы придумываете путешествие, мы обеспечиваем детали.</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/Roboto-Thin.woff2" as="font">
+    <link rel="preload" href="fonts/Roboto-Light.woff2" as="font">
+    <link rel="preload" href="fonts/Roboto-Regular.woff2" as="font">
+    <link rel="preload" href="fonts/Roboto-Bold.woff2" as="font">
+  </head>
+
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol viewBox="0 0 160 47.2">
+        <g id="logo-bike" fill="none" stroke-width="2">
+          <path d="M89.2 4.9c0 4.7-4 8.6-9.1 8.6S70.9 9.7 70.9 5v-.1"/>
+          <ellipse cx="71.1" cy="3.5" rx="2.5" ry="2.5"/>
+          <circle cx="88.9" cy="3.5" r="2.5"/>
+        </g>
+        <g id="logo-text">
+          <path d="M79.5 5.9h1.3c.4 0 .6.3.6.6v12.3c0 .4-.3.6-.6.6h-1.3c-.4 0-.6-.3-.6-.6V6.6c0-.4.2-.7.6-.7z"/>
+          <path d="M150.1 29.2v-1.3c0-1.4 0-2.1-.7-2.6-.5-.3-1.1-.5-1.7-.4H146v6.7h1.8c.6.1 1.2-.1 1.7-.6s.7-1.1.6-1.8z"/>
+          <path d="M136.9 28.4c.1-.9 0-1.8-.4-2.6-.1-.3-.4-.6-.7-.7-.7-.4-1.6-.3-2.3.1-.6.5-1 1.3-.9 2.1v8.6c0 .6 0 1.2.2 1.8.3.8 1.1 1.3 2 1.2.4 0 .9-.1 1.2-.4.7-.6 1-1.5.9-2.4v-7.7z"/>
+          <path d="M55.3 28.5v-1.9c0-.3 0-.6-.1-.9-.3-.8-1.2-.8-1.9-.8h-1.4v5.8H53c.4 0 .7 0 1.1-.1.8-.3 1.3-1.2 1.2-2.1z"/>
+          <path d="M55.8 34c0-.4 0-.7-.1-1.1-.4-1.1-1.6-1.3-2.7-1.3h-1.1v7h1.9c.5.1 1-.1 1.5-.4.5-.4.6-.9.6-2.1l-.1-2.1z"/>
+          <path d="M150 15.2H10c-5.5 0-10 4.5-10 10v12c0 5.5 4.5 10 10 10h140c5.5 0 10-4.5 10-10v-12c0-5.5-4.5-10-10-10zM15 25h-2.8v14.6h-1.1V25H8.3v-1H15v1zm12.3 14.6h-1.1v-7.7h-4.1v7.7H21V24h1.1v6.9h4.1V24h1.1v15.6zM40.1 25h-4.6l.1 6h3.7v.9h-3.7v6.7h4.5v1h-5.6V24h5.6v1zM56 39c-.5.4-1.3.6-2.1.6h-3.2V24h3c.7-.1 1.5.2 2.1.7.4.5.6 1.1.5 1.8v2.3c0 .4 0 .7-.1 1.1-.3.7-1 1.2-1.8 1.3.6 0 1.2.2 1.7.6.6.6.9 1.5.7 2.3v2.7c.1.8-.2 1.6-.8 2.2zm8.8.6h-1.1V24h1.1v15.6zm13.4 0h-1.1l-2.9-8.1-1.2 2.2v5.9h-1.1V24H73v7.6l4-7.6h1.2l-3.4 6.2 3.4 9.4zM90 25h-4.6l.1 6h3.7v.9h-3.7v6.7H90v1h-5.6V24H90v1zm20.8 13.7c-.6.8-1.7 1.2-2.7 1.1-.6 0-1.3-.1-1.8-.4-.2-.1-.4-.2-.5-.4-.4-.3-.6-.7-.8-1.1-.1-.4-.2-.8-.2-1.3v-2.2h1.1v2.3c-.1 1.1.8 2.1 2 2.2h.4c.4 0 .8-.1 1.2-.3.6-.3.9-1 .9-2.3.1-.8-.1-1.6-.6-2.2-.5-.7-1.1-1.4-1.8-2-.7-.6-1.3-1.3-1.8-2-.6-.8-.9-1.9-.9-2.9 0-.4 0-.8.1-1.2.2-1.4 1.5-2.4 2.9-2.3.7 0 1.3.1 1.9.4 1.1.7 1.1 2 1.1 3.2v1.1h-1.1V27c0-.3 0-.7-.1-1-.1-.9-.9-1.5-1.8-1.4-.4 0-.8.1-1.1.3-.6.5-.9 1.3-.8 2.1 0 1.2.5 2.4 1.4 3.2.2.4.6.8 1 1.2.6.5 1.1 1.1 1.6 1.7.7.9 1.1 2 1 3.1.1.9-.1 1.8-.6 2.5zm13.7.9h-1.1v-7.7h-4.1v7.7h-1.1V24h1.1v6.9h4.1V24h1.1v15.6zm13.3-3.2c0 .7-.1 1.4-.5 2-.4 1-1.5 1.5-2.6 1.4-.9 0-1.8-.3-2.5-.9-.5-.7-.8-1.7-.7-2.6v-8.8c0-.6.1-1.2.2-1.8.5-1.2 1.7-2 3-1.9.7 0 1.4.2 2 .6 1.1.8 1.1 2.2 1.1 3.4v8.6zm13.5-7.2c0 .8-.2 1.7-.7 2.3-.8.7-1.8 1.1-2.8 1h-1.6v7.1H145V24h2.5c1-.1 2 .1 2.9.6.9.7.9 1.7.9 2.8v1.8z"/>
+        </g>
+      </symbol>
+    </svg>
+
+    <header class="page-header">
+      <nav class="main-nav">
+        <a class="main-nav__logo-link">
+          <span class="visually-hidden">Логотип The Bike Shop — Вернуться на Главную</span>
+          <svg class="main-nav__logo-icon" width="160" height="47.2">
+            <use class="main-nav__logo-core-text" xlink:href="#logo-text"></use>
+            <use class="main-nav__logo-core-bike" xlink:href="#logo-bike"></use>
+          </svg>
+        </a>
+        <ul class="main-nav__pages-list">
+          <li class="main-nav__pages-item">
+            <a class="main-nav__pages-item-link" href="#!">Велосипеды</a>
+          </li>
+          <li class="main-nav__pages-item">
+            <a class="main-nav__pages-item-link" href="#!">Запчасти</a>
+          </li>
+          <li class="main-nav__pages-item">
+            <a class="main-nav__pages-item-link" href="#!">Аксессуары</a>
+          </li>
+          <li class="main-nav__pages-item">
+            <a class="main-nav__pages-item-link" href="#!">Дополнительно</a>
+          </li>
+        </ul>
+      </nav>
+      <section class="page-header__intro">
+        <h1 class="page-header__title">Велосипеды ручной работы</h1>
+        <p class="page-header__subtitle">
+          Вы придумываете <span class="page-header__subtitle-markdown">путешествие</span>,
+          мы обеспечиваем <span class="page-header__subtitle-markdown">детали</span>.
+        </p>
+        <a class="page-header__action-button  button" href="#!">Подобрать модель</a>
+      </section>
+    </header>
+
+    <main class="page-main">
+      <section class="categories">
+        <div class="categories__wrapper">
+          <h2 class="categories__title">Категории</h2>
+          <ul class="categories__list">
+            <li class="categories__item  categories__item--bg-fixed">
+              <h3 class="categories__item-title">Фиксированная / Одна передача</h3>
+              <p class="categories__item-description">Вы готовы к Революции 27.5?</p>
+              <a class="categories__action-button  button  button--white-transparent" href="#!">
+                В магазин
+              </a>
+            </li>
+            <li class="categories__item  categories__item--bg-premium">
+              <h3 class="categories__item-title">Серия Premium</h3>
+              <p class="categories__item-description">Только эксклюзивные компоненты</p>
+              <a class="categories__action-button  button  button--white-transparent" href="#!">
+                В магазин
+              </a>
+            </li>
+            <li class="categories__item  categories__item--bg-citybikes">
+              <h3 class="categories__item-title">Велосипеды для города</h3>
+              <p class="categories__item-description">Вы — Покоритель Улиц.</p>
+              <a class="categories__action-button  button  button--white-transparent" href="#!">
+                В магазин
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="novelty">
+        <h2 class="novelty__title">Последние модели</h2>
+        <article class="product">
+          <picture class="product__cover-set">
+            <source type="image/webp" srcset="img/product-cover-01.webp">
+            <img class="product__cover" src="img/product-cover-01.jpg" alt="Big Boy Ultra">
+          </picture>
+          <div class="product__info">
+            <h3 class="product__title">
+              <a class="product__title-link" href="#!">Big Boy Ultra</a>
+            </h3>
+            <p class="product__price">$419.00</p>
+            <p class="product__time">
+              В наличии с
+              <time datetime="2017-11-17">17 ноября 2017</time>
+            </p>
+            <h4 class="visually-hidden">Описание модели:</h4>
+            <p class="product__review">
+              По-настоящему яркий велосипед для ценителей таких же ярких впечатлений!
+              Вилка Head-Shok® Super Fatty Ultra DLR с 80-миллиметровыми подушками
+              создана абсолютно для любых видов путешествий. Серьезно: решите вы
+              объездить каньон либо устроить скоростной спуск по лесным тропам —
+              с Big Boy Ultra поездка будет невероятно легкой и приятной.<br>
+              Произведено в Америке, гарантия 24 месяца.
+            </p>
+            <div class="product__actions">
+              <a class="product__comments-button  button  button--white" href="#!">
+                Посмотреть отзывы
+              </a>
+              <a class="product__buy-button  button" href="#!">Купить</a>
+            </div>
+          </div>
+          <div class="product__comments  product__comments--visible">
+            <h4 class="visually-hidden">Отзывы покупателей</h4>
+            <blockquote class="product__comment">
+              <cite class="product__comment-author">Артем Сурганов:</cite>
+              <p class="product__comment-text">
+                Великолепный байк! Купил и не пожалел ни разу. Мощь, скорость, йухуууу!
+              </p>
+            </blockquote>
+            <button class="product__more-comments-button  button">Больше отзывов</button>
+          </div>
+        </article>
+        <article class="product">
+          <picture class="product__cover-set">
+            <source type="image/webp" srcset="img/product-cover-02.webp">
+            <img class="product__cover" src="img/product-cover-02.jpg" alt="Fixed Gear">
+          </picture>
+          <div class="product__info">
+            <h3 class="product__title">
+              <a class="product__title-link" href="#!">Fixed Gear</a>
+            </h3>
+            <p class="product__price">$950.00</p>
+            <p class="product__time">
+              В наличии с
+              <time datetime="2017-12-29">29 декабря 2017</time>
+            </p>
+            <h4 class="visually-hidden">Описание модели:</h4>
+            <p class="product__review">
+              Жесткая, гладкая рама и ориентированная на гору геометрия модели
+              Fixed Gear позволяют осуществлять сверхчувствительную езду.
+              SAVE технология микро-подвески, вилки и сидения поглощает все удары
+              и вибрацию, улучшает комфорт, управляемость и дает полный контроль над дорогой.<br>
+              Все велосипеды линейки Fixed Gead включают пожизненную бесплатную гарантию.
+            </p>
+            <div class="product__actions">
+              <a class="product__comments-button  button  button--white" href="#!">
+                Посмотреть отзывы
+              </a>
+              <a class="product__buy-button  button" href="#!">Купить</a>
+            </div>
+          </div>
+          <div class="product__comments">
+            <h4 class="visually-hidden">Отзывы покупателей</h4>
+            <button class="product__more-comments-button  button">Больше отзывов</button>
+          </div>
+        </article>
+        <article class="product">
+          <picture class="product__cover-set">
+            <source type="image/webp" srcset="img/product-cover-03.webp">
+            <img class="product__cover" src="img/product-cover-03.jpg" alt="Sanchaez">
+          </picture>
+          <div class="product__info">
+            <h3 class="product__title">
+              <a class="product__title-link" href="#!">SANCHAEZ</a>
+            </h3>
+            <p class="product__price">$1400.00</p>
+            <p class="product__time">
+              В наличии с
+              <time datetime="2018-01-15">15 января 2018</time>
+            </p>
+            <h4 class="visually-hidden">Описание модели:</h4>
+            <p class="product__review">
+              Винтажный велосипед Sanchaez поставляется с универсальной задней стойкой,
+              передним и задним крыльями, а также колокольчиком, поэтому вам будет легко
+              адаптироваться к любым городским условиям.
+              Стильные и практичные агрегаты включают в себя стальные краны, подставку,
+              отражатели, заднюю стойку, кожаные ручки и седло с пружинами.
+              Особый шарм модели добавляет классическая передняя корзина.<br>
+              Этот велосипед вам непременно приглянется!
+            </p>
+            <div class="product__actions">
+              <a class="product__comments-button  button  button--white" href="#!">
+                Посмотреть отзывы
+              </a>
+              <a class="product__buy-button  button" href="#!">Купить</a>
+            </div>
+          </div>
+          <div class="product__comments">
+            <h4 class="visually-hidden">Отзывы покупателей</h4>
+            <button class="product__more-comments-button  button">Больше отзывов</button>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <nav class="main-nav">
+        <a class="main-nav__logo-link">
+          <span class="visually-hidden">Логотип The Bike Shop — Вернуться на Главную</span>
+          <svg class="main-nav__logo-icon" width="160" height="47.2">
+            <use class="main-nav__logo-core-text  main-nav__logo-core-text--black" xlink:href="#logo-text"></use>
+            <use class="main-nav__logo-core-bike  main-nav__logo-core-bike--black" xlink:href="#logo-bike"></use>
+          </svg>
+        </a>
+        <ul class="main-nav__pages-list  main-nav__pages-list--color-black">
+          <li class="main-nav__pages-item">
+            <a class="main-nav__pages-item-link" href="#!">Велосипеды</a>
+          </li>
+          <li class="main-nav__pages-item">
+            <a class="main-nav__pages-item-link" href="#!">Запчасти</a>
+          </li>
+          <li class="main-nav__pages-item">
+            <a class="main-nav__pages-item-link" href="#!">Аксессуары</a>
+          </li>
+          <li class="main-nav__pages-item">
+            <a class="main-nav__pages-item-link" href="#!">Дополнительно</a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+
+    <template style="display: none;">
+      <blockquote class="product__comment">
+        <cite class="product__comment-author">Артем Сурганов:</cite>
+        <p class="product__comment-text">
+          Великолепный байк! Купил и не пожалел ни разу. Мощь, скорость, йухуууу!
+        </p>
+      </blockquote>
+    </template>
+
+  </body>
+</html>

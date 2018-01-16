@@ -1,0 +1,113 @@
+.categories {
+  background-color: #e7e7e7;
+  background-image: url("../img/categories-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.categories__wrapper {
+  width: 1096px;
+  padding-top: 67px;
+  padding-right: 52px;
+  padding-bottom: 171px;
+  padding-left: 52px;
+  margin: 0 auto;
+}
+
+.categories__title {
+  width: 60%;
+  padding: 0;
+  margin: 0 auto;
+  margin-bottom: 68px;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000000;
+}
+
+.categories__list {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+  flex-wrap: wrap;
+}
+
+.categories__item {
+  width: 286px;
+  padding-top: 140px;
+  padding-right: 30px;
+  padding-bottom: 105px;
+  padding-left: 30px;
+  position: relative;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #7e7e7e;
+  background-repeat: no-repeat;
+  background-size: 100% 100%, cover;
+  background-position: center center;
+  cursor: default;
+
+  &--bg-fixed {
+    background-image: none, url("../img/categories-bg-fixed.jpg");
+  }
+
+  &--bg-fixed:hover {
+    background-image: url("../img/categories-bg-triangle.svg"), url("../img/categories-bg-fixed.jpg");
+  }
+
+  &--bg-premium {
+    background-image: none, url("../img/categories-bg-premium.jpg");
+  }
+
+  &--bg-premium:hover {
+    background-image: url("../img/categories-bg-triangle.svg"), url("../img/categories-bg-premium.jpg");
+  }
+
+  &--bg-citybikes {
+    background-image: none, url("../img/categories-bg-citybikes.jpg");
+  }
+
+  &--bg-citybikes:hover {
+    background-image: url("../img/categories-bg-triangle.svg"), url("../img/categories-bg-citybikes.jpg");
+  }
+}
+
+.categories__item-title {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 6px;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fcff19;
+}
+
+.categories__item-description {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.categories__action-button {
+  display: none;
+  position: absolute;
+  bottom: 38px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  .categories__item:hover & {
+    display: inline-block;
+  }
+}

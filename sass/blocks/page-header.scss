@@ -1,0 +1,50 @@
+.page-header {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-image: url("../img/intro-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.page-header__intro {
+  width: 1096px;
+  padding: 52px;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.page-header__title {
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 50px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.page-header__subtitle {
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 31px;
+  font-size: 28px;
+  font-weight: 100;
+  color: #ffffff;
+}
+
+.page-header__subtitle-markdown {
+  color: #fcff19;
+}
