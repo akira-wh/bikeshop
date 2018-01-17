@@ -1,9 +1,9 @@
 .categories {
-  background-color: #e7e7e7;
-  background-image: url("../img/categories-bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+  background-color: #e3e3e3;
+  background-image: url("../img/abstract-bg.jpg");
+  background-repeat: repeat-y;
+  background-size: auto;
+  background-position: center top;
 }
 
 .categories__wrapper {
@@ -54,7 +54,7 @@
   background-repeat: no-repeat;
   background-size: 100% 100%, cover;
   background-position: center center;
-  cursor: default;
+  cursor: pointer;
 
   &--bg-fixed {
     background-image: none, url("../img/categories-bg-fixed.jpg");
