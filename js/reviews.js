@@ -96,6 +96,7 @@
    * отмена стандартного поведения формы,
    * запись отзыва в базу данных,
    * перерисовка списка отзывов с учетом нового,
+   * отображение пользователю сообщения-статуса,
    * обнуление заполненной формы.
    *
    * @function onModalFormSubmit
@@ -111,12 +112,13 @@
 
     window.data.unshift(newReview);
     refreshReviews();
+    switchMoreReviewsButtonAccessibility();
     window.constants.MODAL_ALERT_SUCCESS.classList.add('modal__alert--active');
     window.constants.MODAL_FORM.reset();
   }
 
   /**
-   * Перерисовка отзывов, обнуление контейнера и счетчика.
+   * Перерисовка списка отзывов, обнуление контейнера и счетчика.
    *
    * @function refreshReviews
    */
@@ -124,6 +126,25 @@
     window.constants.REVIEWS_CONTAINER.innerHTML = '';
     window.constants.MORE_REVIEWS_BUTTON.dataset.count = '0';
     renderReviews();
+  }
+
+  /**
+   * Блокировка/разблокировка кнопки "Показать еще" (отзывы).
+   *
+   * @function switchMoreReviewsButtonAccessibility
+   */
+  function switchMoreReviewsButtonAccessibility() {
+    if (!window.constants.MORE_REVIEWS_BUTTON.classList.contains('button--unactive')) {
+      // Блокировка кнопки
+      window.constants.MORE_REVIEWS_BUTTON.classList.add('button--unactive');
+      window.constants.MORE_REVIEWS_BUTTON.textContent = 'Конец списка';
+      window.constants.MORE_REVIEWS_BUTTON.removeEventListener('click', onMoreReviewsButtonClick);
+    } else {
+      // Разблокировка кнопки
+      window.constants.MORE_REVIEWS_BUTTON.classList.remove('button--unactive');
+      window.constants.MORE_REVIEWS_BUTTON.textContent = 'Показать еще';
+      window.constants.MORE_REVIEWS_BUTTON.addEventListener('click', onMoreReviewsButtonClick);
+    }
   }
 
   /**
@@ -153,9 +174,7 @@
         review.appendChild(reviewAuthor);
         reviewsFragment.appendChild(review);
       } else {
-        window.constants.MORE_REVIEWS_BUTTON.classList.add('button--unactive');
-        window.constants.MORE_REVIEWS_BUTTON.textContent = 'Конец списка';
-        window.constants.MORE_REVIEWS_BUTTON.removeEventListener('click', onMoreReviewsButtonClick);
+        switchMoreReviewsButtonAccessibility();
         break;
       }
     }
