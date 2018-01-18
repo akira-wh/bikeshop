@@ -69,9 +69,22 @@
 .reviews__quote-text {
   max-width: 100%;
   padding: 0;
+  padding-bottom: 20px;
   margin: 0;
   margin-bottom: 10px;
+  position: relative;
   text-align: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 130px;
+    height: 1px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #d3d3d3;
+  }
 }
 
 .reviews__quote-author {
@@ -82,11 +95,13 @@
   font-weight: 700;
   letter-spacing: 0.005em;
   font-style: normal;
+  text-align: center;
   color: #000000;
 }
 
 .reviews__actions-container {
-  width: 100%;
+  width: 60%;
+  margin: 0 auto;
 
   display: flex;
   flex-direction: row;

@@ -189,52 +189,10 @@
       <section class="reviews">
         <div class="reviews__wrapper">
           <h2 class="reviews__title">Отзывы клиентов</h2>
-          <div class="reviews__container">
-            <blockquote class="reviews__quote">
-              <p class="reviews__quote-text">
-                Купил у вас Даймондблэк. Великолепный байк! До него катался
-                на Synapse Carbon Ultegra, что в несколько раз дороже, а по
-                комфорту гораздо хуже. Удивительно просто.
-              </p>
-              <cite class="reviews__quote-author">Федор</cite>
-            </blockquote>
-            <blockquote class="reviews__quote">
-              <p class="reviews__quote-text">
-                Живу в Боларии, рискнул сделать заказ с авиадоставкой.
-                В итоге звонили консультировать аж по Skype :)) Доставили
-                кстати очень быстро, вложили много подарков, а велосипед-то
-                какой — настоящий мустанг. Респект BikeShop!
-              </p>
-              <cite class="reviews__quote-author">Филипп Стефанов</cite>
-            </blockquote>
-            <blockquote class="reviews__quote">
-              <p class="reviews__quote-text">
-                Взял версию Warbird Carbon Apex.
-                Хороший байк, но цена завышена. Как бы купил,
-                как бы безумно рад, но теперь как бы нечего жрать ))
-              </p>
-              <cite class="reviews__quote-author">Бека</cite>
-            </blockquote>
-            <blockquote class="reviews__quote">
-              <p class="reviews__quote-text">
-                Долго копила и наконец-то взяла. Clutch 2 27.5.
-                Каййййф — не передать словами :)))
-              </p>
-              <cite class="reviews__quote-author">Kitty Kat</cite>
-            </blockquote>
-            <blockquote class="reviews__quote">
-              <p class="reviews__quote-text">
-                Очень хороший магазин. Перед покупкой попросил продавца
-                пару минут прокатиться — в итоге он терпел меня час.
-                Зато я объездил всё что нашел и выбрал самое лучшее.
-                Счастлив, спасибо Байкшоп :)
-              </p>
-              <cite class="reviews__quote-author">Фархат</cite>
-            </blockquote>
-            <div class="reviews__actions-container">
-              <button class="reviews__more-button  button" data-count="5" type="button">Показать еще</button>
-              <a class="reviews__write-button  button" href="#!">Оставить отзыв</a>
-            </div>
+          <div class="reviews__container"></div>
+          <div class="reviews__actions-container">
+            <button class="reviews__more-button  button" data-count="0" type="button">Показать еще</button>
+            <a class="reviews__write-button  button" href="#!">Оставить отзыв</a>
           </div>
         </div>
       </section>
@@ -267,11 +225,12 @@
     </footer>
 
     <div class="modal">
+      <h2 class="visually-hidden">Оставьте свой отзыв о нас или нашей продукции</h2>
       <form class="modal__form" action="#" method="post">
-        <input class="modal__form-input" type="text" name="author"
-                placeholder="Представьтесь, пожалуйста" required autofocus>
-        <textarea class="modal__form-textarea" name="text" cols="70" rows="20"
-                placeholder="Ваш отзыв" required></textarea>
+        <input class="modal__form-input" type="text" name="author" minlength="2" maxlength="80"
+                placeholder="Представьтесь, пожалуйста" required>
+        <textarea class="modal__form-textarea" name="text" cols="70" rows="20" minlength="40"
+                maxlength="2000" placeholder="Ваш отзыв" required></textarea>
         <div class="modal__actions-container">
           <button class="modal__submit-button  button" type="submit">Отправить</button>
         </div>
@@ -279,10 +238,16 @@
       <button class="modal__close-button" type="button">
         <span class="visually-hidden">Закрыть окно</span>
       </button>
+      <div class="modal__alert  modal__alert--success">
+        <p class="modal__alert-message">Спасибо!<br> Ваш отзыв успешно добавлен!</p>
+      </div>
+      <div class="modal__alert  modal__alert--error">
+        <p class="modal__alert-message">Что-то пошло не так...<br> Повторите попытку позже.</p>
+      </div>
     </div>
 
-    <script src="js/constants.js"></script>
-    <script src="js/data.js"></script>
-    <script src="js/reviews.js"></script>
+    <script src="js/constants.min.js"></script>
+    <script src="js/data.min.js"></script>
+    <script src="js/reviews.min.js"></script>
   </body>
 </html>
