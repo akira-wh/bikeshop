@@ -55,12 +55,13 @@
         reviewText.textContent = window.data[i].text;
         reviewsFragment.appendChild(review);
       } else {
+        window.constants.MORE_REVIEWS_BUTTON.classList.add('button--unactive');
         window.constants.MORE_REVIEWS_BUTTON.textContent = 'Конец списка';
         break;
       }
     }
 
-    window.constants.REVIEWS_CONTAINER.insertBefore(reviewsFragment, window.constants.MORE_REVIEWS_BUTTON);
+    window.constants.REVIEWS_CONTAINER.insertBefore(reviewsFragment, window.constants.REVIEWS_INSERT_POINT);
     window.constants.MORE_REVIEWS_BUTTON.dataset.count = i;
   }
 })();

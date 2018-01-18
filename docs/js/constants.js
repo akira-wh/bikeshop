@@ -13,7 +13,6 @@
 (function () {
 
   window.constants = {
-
     // Контейнер с отзывами
     REVIEWS_CONTAINER: document.querySelector('.reviews__container'),
 
@@ -22,6 +21,9 @@
 
     // Шаг, с которым подгружаются новые отзывы (количество)
     REVIEWS_LOAD_STEP: 5,
+
+    // Точка отрисовки комментариев
+    REVIEWS_INSERT_POINT: document.querySelector('.reviews__actions-container'),
 
     // Шаблон разметки отзыва
     REVIEW_TEMPLATE: document.querySelector('template').content.querySelector('.reviews__quote')
