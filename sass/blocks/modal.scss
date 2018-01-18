@@ -1,0 +1,127 @@
+.modal {
+  display: none;
+  width: 700px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-top: 100px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  background-color: #ffffff;
+  box-shadow: 0px 5px 35px 5px rgba(0,0,0,0.75);
+
+  &--active {
+    display: block;
+  }
+}
+
+.modal__form {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.modal__form-input,
+.modal__form-textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  border: 2px solid #dcdcdc;
+  appearance: none;
+  font-family: "Roboto", "Arial", "Verdana", sans-serif;
+  font-size: 15px;
+  line-height: 1.222;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.005em;
+  color: #000000;
+  background-color: #ffffff;
+  transition: border-color 0.4s ease;
+
+  &:focus {
+    border-color: rgba(0,146,29,0.40);
+    outline: none;
+  }
+}
+
+.modal__form-textarea {
+  height: 180px;
+  padding-top: 20px;
+  margin-bottom: 40px;
+  resize: none;
+}
+
+.modal__actions-container {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.modal__submit-button {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.modal__close-button {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  border: 0;
+  border-radius: 50%;
+  background-color: #000000;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 25px;
+    top: 50%;
+    left: 50%;
+    background-color: #fcff19;
+  }
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: lighten(#000000, 12%);
+  }
+
+  &:active {
+    background-color: lighten(#000000, 10%);
+
+    &::before,
+    &::after {
+      height: 24px;
+    }
+  }
+}

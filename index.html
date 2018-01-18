@@ -266,6 +266,21 @@
       </nav>
     </footer>
 
+    <div class="modal">
+      <form class="modal__form" action="#" method="post">
+        <input class="modal__form-input" type="text" name="author"
+                placeholder="Представьтесь, пожалуйста" required autofocus>
+        <textarea class="modal__form-textarea" name="text" cols="70" rows="20"
+                placeholder="Ваш отзыв" required></textarea>
+        <div class="modal__actions-container">
+          <button class="modal__submit-button  button" type="submit">Отправить</button>
+        </div>
+      </form>
+      <button class="modal__close-button" type="button">
+        <span class="visually-hidden">Закрыть окно</span>
+      </button>
+    </div>
+
     <script src="js/constants.js"></script>
     <script src="js/data.js"></script>
     <script src="js/reviews.js"></script>

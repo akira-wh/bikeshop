@@ -15,6 +15,12 @@
   // Навешивание на кнопку "Показать еще" хендлера нажатия
   window.constants.MORE_REVIEWS_BUTTON.addEventListener('click', onMoreReviewsButtonClick);
 
+  // Навешивание на кнопку "Оставить отзыв" хендлера нажатия
+  window.constants.WRITE_REVIEW_BUTTON.addEventListener('click', function () {
+    window.constants.MODAL.classList.add('modal--active');
+    window.constants.MODAL_CLOSE_BUTTON.addEventListener('click', onModalCloseButtonClick);
+  });
+
   /**
    * При клике по кнопке "Показать еще":
    * отрисовка следующих комментариев.
@@ -23,6 +29,17 @@
    */
   function onMoreReviewsButtonClick() {
     renderReviews();
+  }
+
+  /**
+   * При клике по кнопке "Закрыть" —
+   * закрытие модального окна.
+   *
+   * @function onModalCloseButtonClick
+   */
+  function onModalCloseButtonClick() {
+    window.constants.MODAL.classList.remove('modal--active');
+    window.constants.MODAL_CLOSE_BUTTON.removeEventListener('click', onModalCloseButtonClick);
   }
 
   /*
@@ -64,6 +81,7 @@
       } else {
         window.constants.MORE_REVIEWS_BUTTON.classList.add('button--unactive');
         window.constants.MORE_REVIEWS_BUTTON.textContent = 'Конец списка';
+        window.constants.MORE_REVIEWS_BUTTON.removeEventListener('click', onMoreReviewsButtonClick);
         break;
       }
     }
