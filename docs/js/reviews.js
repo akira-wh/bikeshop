@@ -46,13 +46,20 @@
     var reviewsFragment = document.createDocumentFragment();
 
     for (var i = reviewsStartIndex; i < reviewsStartIndex + window.constants.REVIEWS_LOAD_STEP; i++) {
-      var review = window.constants.REVIEW_TEMPLATE.cloneNode(true);
-      var reviewText = review.querySelector('.reviews__quote-text');
-      var reviewAuthor = review.querySelector('.reviews__quote-author');
-
       if (window.data[i]) {
+        var review = document.createElement('blockquote');
+        var reviewText = document.createElement('p');
+        var reviewAuthor = document.createElement('cite');
+
+        review.classList.add('reviews__quote');
+        reviewText.classList.add('reviews__quote-text');
+        reviewAuthor.classList.add('reviews__quote-author');
+
         reviewAuthor.textContent = window.data[i].author;
         reviewText.textContent = window.data[i].text;
+
+        review.appendChild(reviewText);
+        review.appendChild(reviewAuthor);
         reviewsFragment.appendChild(review);
       } else {
         window.constants.MORE_REVIEWS_BUTTON.classList.add('button--unactive');
