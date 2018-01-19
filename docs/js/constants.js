@@ -41,7 +41,7 @@
     // Поле "Имя" формы
     MODAL_FORM_AUTHOR: document.querySelector('.modal__form-input[name="author"]'),
 
-    // Поле "Имя" формы
+    // Поле "Текст отзыва" формы
     MODAL_FORM_TEXT: document.querySelector('.modal__form-textarea[name="text"]'),
 
     // Оповещение об успешном размещении коментария
