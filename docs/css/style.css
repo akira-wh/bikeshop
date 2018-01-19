@@ -1442,8 +1442,8 @@ input[type="radio"].visually-hidden {
   display: flex;
   -webkit-animation-name: soft-appearance;
           animation-name: soft-appearance;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-timing-function: ease;
